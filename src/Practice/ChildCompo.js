@@ -1,9 +1,14 @@
 import React from 'react'
 
-const ChildCompo = () => {
-    console.log("child rendered")
+const ChildCompo = (props) => {
+    // console.log("child rendered")
+    let counterValue = props.childCounter;
+
+
     return (
-        <div>ChildCompo</div>
+        <div>
+            <button onClick={() => props.callbackFun(++counterValue)}>Increment</button>
+        </div>
 
     )
 }
